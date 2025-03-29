@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+$color1: rgb(89, 142, 146);
+$color2: rgb(51, 91, 93);
+$color3: rgb(168, 213, 210);
+$color4: rgb(22, 36, 37);
+$color5: rgb(255, 255, 255);
+
+$fl: 100%;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: $color1;
+    width: $fl;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.otd-pika {
+    background-color: $color1;
+    border-right: 1px solid rgba(0, 0, 0, 40%);
+    width: 158px;
+    height: $fl;
+}
+
+.circle {
+    width: 104px;
+    height: 102px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    display: block;
+}
+
+.pika {
+    width: 75px;
+    cursor: pointer;
+
+    margin: {
+        left: 15px;
+        top: 18px;
+    }
+}
+
+.navbarText-tp {}
+
+.navbarText {
+    width: 567px;
+}
+
+.otd-game {
+    background-color: $color1;
+    border-left: 1px solid rgba(0, 0, 0, 40%);
+    width: 158px;
+    height: $fl;
+}
+
+.gamePad {
+    width: 86px;
+    cursor: pointer;
+
+    margin: {
+        left: 10px;
+        top: 20px;
+    }
+}
+
+main {
+    width: $fl;
+    height: 50px;
+    background-color: $color2;
+}
+
+footer {
+    width: $fl;
+    height: 225px;
+    background-color: $color4;
+    display: block;
+}
+
+footer p {
+    font: {
+        family: JetBrains Mono;
+        size: 36px;
+    }
+
+    cursor: default;
+    color: $color5;
+    text-align: center;
+    position: relative;
+    top: 38%;
+}
+
+footer p:hover {
+    //сделать эффект
+}
