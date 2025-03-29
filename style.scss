@@ -75,18 +75,48 @@ header {
 
 main {
     width: $fl;
-    height: 50px;
+    height: $fl;
     background-color: $color2;
+    display: grid;
+    grid-template-columns: repeat(3, 775px);
+}
+
+.body{
+    background-color: rgb(89, 142, 146);
+    width: 340px;
+    height: 172px;
+    border-radius: 12px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-around;
+    margin: {
+        left: 16px;
+        top: 15px;
+    }
+    margin-bottom: 15px;
+}
+
+.image-win{
+    background-color: $color5;
+    width: 138px;
+    height: 130px;
+    border-radius: 18px;
+}
+
+.name{
+    margin-right: 50px;
 }
 
 footer {
     width: $fl;
-    height: 225px;
+    height: $fl;
     background-color: $color4;
-    display: block;
+    display: flex;
+    position: fixed;
+    justify-content: center;
 }
 
-footer p {
+.txt{
     font: {
         family: JetBrains Mono;
         size: 36px;
@@ -94,11 +124,24 @@ footer p {
 
     cursor: default;
     color: $color5;
-    text-align: center;
-    position: relative;
-    top: 38%;
 }
 
-footer p:hover {
-    //сделать эффект
+// .txt1 {
+//     margin-top: 48px;
+//     color: $color1;
+//     // display: none;
+// }
+
+.txt2{
+    margin-top: 85px;
+}
+
+// .txt3{
+//     margin-top: 112px;
+//     color: $color3;
+//     // display: none;
+// }
+
+.txt2:hover .txt1 {
+    color: red;
 }
