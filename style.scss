@@ -81,29 +81,31 @@ main {
     grid-template-columns: repeat(3, 775px);
 }
 
-.body{
+.body {
     background-color: rgb(89, 142, 146);
     width: 340px;
     height: 172px;
     border-radius: 12px;
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: space-around;
+
     margin: {
         left: 16px;
         top: 15px;
     }
+
     margin-bottom: 15px;
 }
 
-.image-win{
+.image-win {
     background-color: $color5;
     width: 138px;
     height: 130px;
     border-radius: 18px;
 }
 
-.name{
+.name {
     margin-right: 50px;
 }
 
@@ -111,12 +113,12 @@ footer {
     width: $fl;
     height: $fl;
     background-color: $color4;
-    display: flex;
     position: fixed;
+    display: flex;
     justify-content: center;
 }
 
-.txt{
+.txt {
     font: {
         family: JetBrains Mono;
         size: 36px;
@@ -124,24 +126,39 @@ footer {
 
     cursor: default;
     color: $color5;
-}
-
-// .txt1 {
-//     margin-top: 48px;
-//     color: $color1;
-//     // display: none;
-// }
-
-.txt2{
+    position: absolute;
     margin-top: 85px;
+
 }
 
-// .txt3{
-//     margin-top: 112px;
-//     color: $color3;
-//     // display: none;
-// }
+.txt1 {
+    color: $color1;
+    z-index: 2;
+    transition: all 0.35s ease-in;
+    top: 0px;
+    left: 765px;
+}
 
-.txt2:hover .txt1 {
-    color: red;
+.txt2 {
+    z-index: 999;
+}
+
+.txt3 {
+    color: $color3;
+    z-index: 2;
+    transition: all 0.35s ease-in;
+    top: 0;
+    left: 765px;
+}
+
+.txt:hover~.txt3 {
+    top: 35px;
+    left: 780px;
+}
+
+
+.txt:hover~.txt1 {
+    top: -38px;
+    left: 755px;
+
 }
