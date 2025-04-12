@@ -76,27 +76,34 @@ async function test() {
 
 console.log(f())
 
-// const data = results.map(result => {
-//     return {
-//         name: result.name
-//     }
-// })
-
-// console.log(data)
 
 
 
-// const name = fetch()
+let form = document.querySelector("form")
 
+let but = document.querySelector(".sign-in-button");
 
-// fetch("https://pokeapi.co/api/v2/berry/")
-// .then(res => {
-//     return res.json()
-// })
-// .then(data => {
-//     console.log(data)
-//     document.getElementById("1").innerHTML = data.results[2]
-// })
-// .catch(err => {
-//     console.log("ERROR >>> " + err)
-// })
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+})
+
+but.addEventListener("click", ()=>{
+    let login = "Kirill";
+    let addres = "Kirill@mail.ru";
+    let password = 1234567890;    
+
+    let log = document.getElementById("login");
+    let addr = document.getElementById("addres");
+    let pass = document.getElementById("password");
+
+    if(login === log.value && addres === addr.value && password == pass.value){
+        window.location = 'supp.html';
+        console.log("verify")
+    }
+    console.log({
+        login: log.value,
+        address: addr.value,
+        password: pass.value,
+    })
+    
+})
