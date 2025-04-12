@@ -97,7 +97,7 @@ but.addEventListener("click", ()=>{
     let pass = document.getElementById("password");
 
     if(login === log.value && addres === addr.value && password == pass.value){
-        window.location = 'supp.html';
+        window.location = 'index.html';
         console.log("verify")
     }
     console.log({
