@@ -38,6 +38,24 @@ header {
   margin-top: 18px;
 }
 
+.pika:active ~ .message {
+  opacity: 1;
+}
+
+.message {
+  width: 100px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 5px 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 70px;
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
 .navbarText {
   width: 567px;
 }
@@ -58,10 +76,14 @@ header {
 
 main {
   width: 100%;
-  height: 100%;
+  height: 615px;
   background-color: rgb(51, 91, 93);
   display: grid;
-  grid-template-columns: repeat(3, 775px);
+  grid-template-columns: repeat(3, 1fr);
+  overflow-y: scroll;
+  justify-items: center;
+  grid-gap: 10px;
+  padding-top: 10px;
 }
 
 .body {
@@ -71,10 +93,11 @@ main {
   border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin-left: 16px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-left: 10px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .image-win {
@@ -85,7 +108,7 @@ main {
 }
 
 .name {
-  margin-right: 50px;
+  margin-left: 10px;
 }
 
 footer {
@@ -116,6 +139,8 @@ footer {
 
 .txt2 {
   z-index: 999;
+  top: 0px;
+  left: 765px;
 }
 
 .txt3 {
@@ -168,11 +193,15 @@ footer {
   display: inline-block;
 }
 
-.login, .addres, .password p {
+.login,
+.addres,
+.password p {
   text-align: center;
 }
 
-#login, #addres, #password {
+#login,
+#addres,
+#password {
   width: 648px;
   height: 48px;
   background-color: rgb(255, 255, 255);
@@ -184,7 +213,11 @@ footer {
   transition: bottom 0.2s ease-in;
 }
 
-#login, #addres[type=text] {
+#login[type=text] {
+  padding-left: 6px;
+}
+
+#addres[type=email] {
   padding-left: 6px;
 }
 
@@ -219,17 +252,19 @@ footer {
 #login:focus {
   outline: 5px solid rgb(89, 142, 146) !important;
   bottom: 5px;
-  box-shadow: 10px 5px 5px red;
+  box-shadow: 0px 20px 20px 3px rgb(255, 255, 255);
 }
 
 #addres:focus {
   outline: 5px solid rgb(89, 142, 146) !important;
   bottom: 5px;
+  box-shadow: 0px 20px 20px 3px rgb(255, 255, 255);
 }
 
 #password:focus {
   outline: 5px solid rgb(89, 142, 146) !important;
   bottom: 5px;
+  box-shadow: 0px 20px 20px 3px rgb(255, 255, 255);
 }
 
 .sign-in-button {
@@ -238,4 +273,22 @@ footer {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.sign-in-button:hover {
+  border-radius: 0 35px;
+}
+
+.police {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  transition: all 1s ease-in-out;
+}
+
+.police:hover {
+  text-decoration: underline;
+  color: rgba(11, 0, 108, 0.777);
+  letter-spacing: 3px;
 }/*# sourceMappingURL=style.css.map */

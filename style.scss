@@ -113,6 +113,8 @@ main {
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding-left: 10px;
+    color: $color5;
+    text-decoration: none;
 }
 
 .image-win {
@@ -158,6 +160,8 @@ footer {
 
 .txt2 {
     z-index: 999;
+    top: 0px;
+    left: 765px;
 }
 
 .txt3 {
@@ -282,6 +286,7 @@ footer {
     border: none;
     font-size: 24px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .sign-in-button:hover{
@@ -300,3 +305,4 @@ footer {
     color: rgba(11, 0, 108, 0.777);
     letter-spacing: 3px;
 }
+

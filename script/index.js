@@ -1,8 +1,4 @@
 
-// .then(res => {
-//     console.log(res.body)
-//     return res.results
-// })
 
 async function pokemonData(result) {
   return await fetch(result.url)
@@ -16,27 +12,27 @@ async function f() {
 
   const mn = document.querySelector("main")
 
-  const results = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000").then(
+  const results = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10").then(
     (res) => res.json()
   );
 
   const data = await Promise.all(
     results.results.map(async (result) => {
-      setTimeout(() => { }, 1000);
+      setTimeout(() => { }, 3000);
       const pokeData = await fetch(result.url).then((pokeData) =>
         pokeData.json()
       );
       let div = document.createElement("div");
-      div.innerHTML = `<div class="body body1">
+      div.innerHTML = `<a href="descripton.html?name=${result.name}"><div class="body body1">
                       <div class="image-win image-win1"><img src=${pokeData?.sprites?.other?.dream_world?.front_default ?? pokeData?.sprites?.front_default}></div>
                       <h1 class="name name1">${result.name}</h1>
-                  </div>`;
+                  </div></a>`;
 
       mn.append(div);
 
     })
   );
-
+  
   return results
 
 
