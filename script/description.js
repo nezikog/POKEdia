@@ -1,3 +1,21 @@
+
+
+
+
+
+
+
+
+
+#Сделать вместо const create обычную функцию
+
+
+
+
+
+
+
+
 const mn = document.querySelector("main");
 
 const avatar = document.querySelector(".avatar");
