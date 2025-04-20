@@ -24,6 +24,16 @@ function interactive(){
 
   //Сделать способности через forEach
   //В kr_info занести инфо об ударах и тд. более второстепенную информацию занести в bio
+
+  let abilities = data.abilities.map((item) =>{
+    
+    return `<h2>${item.ability.name}</h2>`
+  })
+
+  let moves = data.moves.map((item) =>{
+    return `<p>${item.move.name}</p>`
+  })
+
   div.innerHTML = `<div class="info">
 
       <div class="avatar">
@@ -40,18 +50,15 @@ function interactive(){
       </div>
 
       <div class="kr_info">
-        <h2>
-        ${data.abilities["0"].ability.name}
-        </h2>
-        <h2>
-        ${data.abilities["1"].ability.name}
-        </h2>
+        
+        ${abilities.join("")}
+        
         <h2>
         ${data.base_experience}
         </h2>
-        <h2>
-        ${data.moves["0"].move.name}
-        </h2>
+        <div class="moves">
+          ${moves.join("")}
+        </div>
       </div>
 
       <div class="bio">
@@ -60,6 +67,7 @@ function interactive(){
       </div>
       `
   
+    
     mn.append(div)
 }
 
