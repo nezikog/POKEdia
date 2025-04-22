@@ -34,6 +34,12 @@ function interactive(){
     return `<p>${item.move.name}</p>`
   })
 
+  let stats = data.stats.map((item) => {
+    return `<pre>${item.base_stat}</pre>
+            <pre>${item.stat.name}; </pre>
+    `
+  })
+
   div.innerHTML = `<div class="info">
 
       <div class="avatar">
@@ -44,6 +50,7 @@ function interactive(){
       </div>
 
       <div class="name">
+        <p>Имя: </p>
         <h1 class="name_h3">
           ${data.name}
         </h1>
@@ -51,20 +58,27 @@ function interactive(){
 
       <div class="kr_info">
         
+        <p>Способности: </p>
         ${abilities.join("")}
         
+        <p>Базовый опыт: </p>
         <h2>
         ${data.base_experience}
         </h2>
         <div class="moves">
+          <p>Приемы: </p>
           ${moves.join("")}
         </div>
       </div>
 
-      <div class="bio">
-        <p>${data.weight}</p>
-        <p>${data.height}</p>
-      </div>
+        <p>Вес: </p>
+        <h2>${data.weight}</h2>
+
+        <p>Высота: </p>
+        <h2>${data.height}</h2>
+
+        <h3>Статистика: </h3>
+        ${stats.join("")}
       `
   
     
