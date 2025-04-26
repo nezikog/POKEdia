@@ -49,7 +49,7 @@ function interactive(){
         </div>
       </div>
 
-      <div class="name">
+      <div class="name name1">
         <p>Имя: </p>
         <h1 class="name_h3">
           ${data.name}

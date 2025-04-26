@@ -1,6 +1,6 @@
 const mn = document.querySelector("main");
 
-const results = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10").then(
+const results = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100").then(
   (res) => res.json()
 );
 console.log(results);
