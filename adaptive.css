@@ -1,0 +1,114 @@
+@media screen and (max-width: 950px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .info {
+        flex-wrap: wrap;
+    }
+  }  
+  @media screen and (max-width: 780px) {
+    .txt{
+        font-size: 24px;
+    }
+    #auth h3 {
+      font-size: 25px;
+  }
+  .sign-in {
+    padding: 15px;
+    
+}
+  }
+  @media screen and (max-width: 688px) {
+    .sign-in {
+      padding: 2px;
+    }
+    #auth h3 {
+      font-size: 20px;
+    }
+    .sign-in p {
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 656px) {
+    .sign-in {
+      padding: 1px;
+    }
+    #login, #addres, #password{
+      width: 500px;
+      height: 40px;
+    }
+    .sign-in-button {
+      padding: 10px 115px;
+    }
+    .police {
+      font-size: 12px;
+  }
+  }
+  @media screen and (max-width: 630px) {
+    .avatar{
+        margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .txt{
+        font-size: 18px;
+    }
+    .sign-in {
+      padding: 1px;
+    }
+    #login, #addres, #password{
+      width: 350px;
+      height: 40px;
+    }
+    .sign-in-button {
+      padding: 10px 115px;
+    }
+    .police {
+      font-size: 12px;
+  }
+  }
+  @media screen and (max-width: 490px) {
+    .avatar{
+      min-width: 300px;
+    }
+  }
+  @media screen and (max-width: 392px) {
+    .txt{
+        font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 366px) {
+    .sign-in {
+      padding: 1px;
+    }
+    #login, #addres, #password{
+      width: 300px;
+      height: 30px;
+    }
+    .sign-in-button {
+      padding: 10px 115px;
+    }
+    .police {
+      font-size: 12px;
+  }
+  }
+  @media screen and (max-width: 342px) {
+    .avatar{
+      min-width: 250px;
+    }
+  }
+  @media screen and (max-width: 635px) {
+    .navbarText {
+        height: 60px;
+    }
+  }
+  @media screen and (max-width: 890px) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .otd-pika{
+        display: none;
+    }
+  }

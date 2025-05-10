@@ -27,16 +27,16 @@ function interactive(){
 
   let abilities = data.abilities.map((item) =>{
     
-    return `<h2>${item.ability.name}</h2>`
+    return `<span>${item.ability.name}</span>`
   })
 
   let moves = data.moves.map((item) =>{
-    return `<p>${item.move.name}</p>`
+    return `<span>${item.move.name}</span>`
   })
 
   let stats = data.stats.map((item) => {
-    return `<pre>${item.base_stat}</pre>
-            <pre>${item.stat.name}; </pre>
+    return `<span>${item.base_stat}</span>
+            <span>${item.stat.name}; </span>
     `
   })
 
@@ -49,36 +49,40 @@ function interactive(){
         </div>
       </div>
 
-      <div class="name name1">
-        <p>Имя: </p>
-        <h1 class="name_h3">
+      <div class="moves">
+        <b>Имя: </b>
+        <span>
           ${data.name}
-        </h1>
+        </span>
       </div>
 
       <div class="kr_info">
-        
-        <p>Способности: </p>
-        ${abilities.join("")}
-        
-        <p>Базовый опыт: </p>
-        <h2>
-        ${data.base_experience}
-        </h2>
         <div class="moves">
-          <p>Приемы: </p>
-          ${moves.join("")}
+        <b>Способности: </b>
+        ${abilities.join(", ")}
+        </div>
+        <div class="moves">
+        <b>Базовый опыт: </b>
+        <span>${data.base_experience}</span>
+        </div>
+
+        <div class="moves">
+          <b>Приемы: </b>
+          ${moves.join(", ")}
+        </div>
+        <div class="moves">
+        <b>Вес: </b>
+        <span>${data.weight}</span>
+        </div>
+        <div class="moves">
+        <b>Высота: </b>
+        <span>${data.height}</span>
+       </div>
+        <div class="moves">
+        <b>Статистика: </b>
+        ${stats.join("")}
         </div>
       </div>
-
-        <p>Вес: </p>
-        <h2>${data.weight}</h2>
-
-        <p>Высота: </p>
-        <h2>${data.height}</h2>
-
-        <h3>Статистика: </h3>
-        ${stats.join("")}
       `
   
     
